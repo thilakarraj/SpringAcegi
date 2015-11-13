@@ -1,0 +1,362 @@
+/* css Zen Garden submission 083 - 'Springtime', by Boér Attila */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+/* All associated graphics copyright 2004, Boér Attila */
+/* Added: March 4th, 2004 */
+
+/* IMPORTANT */
+/* This design is not a template. You may not reproduce it elsewhere without the 
+   designer's written permission. However, feel free to study the CSS and use 
+   techniques you learn from it elsewhere. */
+
+/* basic elements */
+body {
+    font: 8pt/16pt Georgia, serif; 
+    color: #000000; 
+    background: #F5F7EC ; 
+    margin: 0px; 
+    background-repeat: repeat-x;
+}
+
+p, #content, #supportingText {
+    font: 8pt/14pt Verdana, sans-serif;
+    margin-top: 0px;
+}
+h3{    
+	font-weight: bold;    
+	font-size: 15pt;    
+	color: #3366cc;    
+	font-family: Arial, sans-serif;}
+
+a:link {
+	color: #336699; 
+	font-family:arial, verdana; 
+	font-size: 11px; 
+	font-weight: none; 
+	text-decoration: none;
+	}
+a:active {
+	color: #336699; 
+	font-family:arial, verdana; 
+	font-size: 11px; 
+	font-weight: none; 
+	text-decoration: none;
+	}
+a:visited {
+	color: #336699; 
+	font-family:arial, verdana; 
+	font-size: 11px; 
+	font-weight: none; 
+	text-decoration: none;
+ 	}
+a:hover {
+	color: #336699; 
+	font-family:arial, verdana; 
+	font-size: 11px; 
+	font-weight: none; 
+	text-decoration: none;
+	}
+a:link {
+	font-size: 11px; 
+	color: #660000; 
+	font-family: arial, verdana; 
+	text-decoration: none
+}
+	
+
+
+/* specific divs */
+#container {
+    background: transparent #ffffff   bottom left;
+    width: 1000px;
+    height: 599px;
+    padding-bottom: 0px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#intro {
+    min-width: 650px;
+}
+
+#pageHeader {
+    margin-bottom: 20px;
+}
+
+
+#quickSummary {
+    background: transparent #eeeeee  no-repeat top left;
+    clear: both;
+    overflow: auto;
+    width: 112px;
+    height: 498px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: absolute;
+    top: 100px;
+    left: 0px;
+}
+
+#quickSummary p {
+    font: 8pt/12pt Verdana, sans-serif;
+    color: #000000;
+    text-align: left;
+}
+
+#quickSummary a {
+    font: bold 8pt/12pt Verdana, sans-serif;
+    color: #00ff00;
+    text-align: left;
+    text-decoration: underline;
+}
+
+#quickSummary a:hover {
+    font: bold 8pt/12pt Verdana, sans-serif;
+    color: #ef00e5;
+    text-align: left;
+    text-decoration: none;
+}
+
+#quickSummary p.credit {
+    position: absolute;
+    bottom: 40px;
+}
+
+#content {
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-left: 30px;
+    overflow: auto;
+    background: transparent #f5f5f5  no-repeat 0 0 !important;
+    position: absolute;
+    top: 33px;
+    left: 190px;
+    height: 550px;
+    width: 720px;
+    border-style : solid solid none solid;
+    border-width : 1px 1px 1px 1px;
+    border-color : #000000 #000000 #000000 #000000;
+}
+
+#image {
+    background: transparent #2222ee url(../images/hmp_logo.gif) no-repeat top right;
+    clear: both;
+    overflow: auto;
+    width: 958px;
+    height: 44px;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#help {
+    background: transparent #0012ac no-repeat top right;
+    clear: both;
+    overflow: auto;
+    width: 958px;
+    height: 20px;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    top: 44px;
+    left: 0px;
+    border-style : solid solid none none;
+    border-width : 1px 1px 0px 0px;
+    border-color : #eeffee #eeffee #eeffee #eeffee;
+    font: 8pt/10pt Verdana, sans-serif;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+
+
+
+/* end of modified stylesheet from www.csszengarden.com */
+
+/* properly aligned list-item icons - from http://tinyurl.com/25flg */
+
+
+/* This is the style for the informational messages presented to the user */
+div.error, div.message {
+    background: #ffc;
+    border: 1px solid green;
+    color: black;
+    font-weight: normal;
+    margin: 10px auto;
+    padding: 2px;
+    padding-left: 4px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/* use a different color for the errors */
+div.error {
+    border: 2px solid red;
+}
+
+span.fieldError {
+    color: maroon !important;
+}
+
+/* style for list tables */
+table.list {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin-top: 10px;
+    width: 100%;
+}
+
+table.list td {
+    padding-left: 3px;
+}
+
+table.list th {
+    background: silver;
+    padding-left: 3px;
+    border-bottom: 1px solid black;
+    text-align: left;
+}
+
+table.list thead tr {
+    background-color: #fc0;
+}
+
+table.list tr.even {
+    background: #eee;
+    border-top: 1px solid silver;
+}
+
+table.list tr.odd {
+    background: white;
+    border-top: 1px solid silver;
+}
+
+/* for cool looking "sunken" input boxes, from www.theserverside.com */
+form input, form textarea, form select {
+    padding-left: 4px;
+    color: #666;
+}
+
+input.button {
+    color: #000;
+}
+
+/* Warning: IE doesn't support pseudo-class :focus */
+form input:focus, form textarea:focus, form select:focus {
+    border-bottom: #ffdead solid 2px;
+    border-right: #ffdead solid 2px;
+    border-left: #c07300 solid 2px;
+    border-top:  #c07300 solid 2px;
+    color: #000;
+}
+
+form select {
+    padding-left: 0px;
+}
+
+
+/* =-=-=-=-=-=-=-[Menu]-=-=-=-=-=-=-=- */
+			
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;	
+	font-size: 80%;
+	font-weight: bold;
+	background: #F3FAFF;
+	}
+	
+a:link {
+	color: #76B0D5;
+	text-decoration: none;
+	}
+	
+a:visited {
+	color: #7B878F;
+	text-decoration: none;
+	}
+	
+a:hover, a:active {
+	color: #2399E5;
+	}
+	
+
+	
+#header {
+	color: #76B0D5;
+	background: #C5E7FD;
+	border-bottom: 3px solid #76B0D5;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 3em;
+	padding: 10px;
+	}
+	
+#content {
+	margin: 10px;
+	color: #555;
+	}
+	
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+	
+p {
+	font-size: .9em;
+	}
+
+
+#firstcol {
+	float: left;
+	}
+	
+#secondcol {
+	float: left;
+	}
+
+#thirdcol {
+	padding-top: 10px;
+	margin-right: 106px;
+	margin-bottom: 10px;
+	float: right;
+	}
+		
+#menu {
+	width: 198px;
+	border-style: solid solid none solid;
+	border-color: #D76100;
+	border-size: 1px;
+	border-width: 1px;
+	border: 1px solid #ccc;
+	margin: 10px;	
+}
+	
+#menu li a {
+  	
+  	voice-family: "\"}\""; 
+  	voice-family: inherit;
+  	height: 23px;
+	text-decoration: none;
+	}
+
+#menu li a:link, #menu li a:visited {
+	color: #888;
+	display: block;
+	background: url(../images/menu3.gif);
+	padding: 8px 0 0 30px;
+	}
+	
+#menu li a:hover, #menu li a:active {
+	color: #283A50;
+	background: url(../images/menu3.gif) 0 -32px;
+	padding: 8px 0 0 30px;
+	}
+
+
+#gap {
+height: 35px;
+}
