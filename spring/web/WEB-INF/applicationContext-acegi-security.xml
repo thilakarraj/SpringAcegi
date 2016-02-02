@@ -134,6 +134,9 @@
 	<bean id="daoAuthenticationProvider"
 		class="org.acegisecurity.providers.dao.DaoAuthenticationProvider">
 		<property name="userDetailsService" ref="userDetailsService" />
+		<property name="passwordEncoder">
+			<ref local="passwordEncoder" />
+		</property>
 		<property name="userCache">
 			<bean
 				class="org.acegisecurity.providers.dao.cache.EhCacheBasedUserCache">
@@ -169,7 +172,7 @@
 		class="com.abc.security.authentication.dao.UserAuthenticationDAOImpl" /-->
 	<!-- ==================Custom AuthenticationProvider implementation ends here ==================-->
 
-	<bean id="userDetailsService"
+	<!-- <bean id="userDetailsService"
 		class="org.acegisecurity.userdetails.memory.InMemoryDaoImpl">
 		<property name="userProperties">
 			<bean
@@ -178,7 +181,14 @@
 					value="/WEB-INF/users.properties" />
 			</bean>
 		</property>
-	</bean>
+	</bean> -->
+	 <bean id="userDetailsService"
+		class="org.acegisecurity.userdetails.jdbc.JdbcDaoImpl">
+		<property name="dataSource">
+		<ref bean="dataSource"/>
+		</property>
+		</bean>
+		
 	<bean id="anonymousAuthenticationProvider"
 		class="org.acegisecurity.providers.anonymous.AnonymousAuthenticationProvider">
 		<property name="key">
@@ -210,4 +220,21 @@
 		</property>
 	</bean>
 	<bean id="roleVoter" class="org.acegisecurity.vote.RoleVoter" />
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/casdb</value>
+		</property>
+		<property name="username">
+			<value>root</value>
+		</property>
+		<property name="password">
+			<value></value>
+		</property>
+	</bean>
+	<bean id="passwordEncoder"
+		class="org.acegisecurity.providers.encoding.Md5PasswordEncoder" />
 </beans>
